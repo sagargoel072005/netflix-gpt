@@ -2,9 +2,9 @@ export const LOGO = "https://help.nflxext.com/helpcenter/OneTrust/oneTrust_produ
 
 
 export const API_OPTIONS = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWM5MTMwZjk0NjE5N2Y5NDkyYzU5YmI0NmM1NzE4OSIsIm5iZiI6MTc0MjY0MjUxMC4yOTksInN1YiI6IjY3ZGU5ZDRlMWZlZTg3YzFiYzdhYTUyZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.G6pej_a2TOhhbVyzH5ti-r6U8_HS0UKzF5vpyfx69GE'
-    }
-  };
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWM5MTMwZjk0NjE5N2Y5NDkyYzU5YmI0NmM1NzE4OSIsIm5iZiI6MTc0MjY0MjUxMC4yOTksInN1YiI6IjY3ZGU5ZDRlMWZlZTg3YzFiYzdhYTUyZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.G6pej_a2TOhhbVyzH5ti-r6U8_HS0UKzF5vpyfx69GE'
+  }
+};
