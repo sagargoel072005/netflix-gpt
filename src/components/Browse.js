@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Header from "./Header";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
-import { useDispatch } from "react-redux";
+import NetflixFooter from "./NetflixFooter";
+import { useDispatch, useSelector } from "react-redux";
 import {
   addNowPlayingmovies,
   addPopularmovies,
@@ -14,6 +15,9 @@ import GptSearch from "./GptSearch";
 
 const Browse = () => {
   const dispatch = useDispatch();
+
+  const showGptSearch = useSelector(store => store.gpt.showGptSearch);
+
 
   // Reusable function to fetch movies
   const fetchMovies = async (url, action) => {
@@ -37,9 +41,15 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      <GptSearch />
-      <MainContainer />
-      <SecondaryContainer />
+      {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+          <NetflixFooter />
+        </>
+      )}
     </div>
   );
 };

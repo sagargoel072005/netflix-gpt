@@ -80,18 +80,15 @@ const Signup = () => {
   return (
     <div className="relative h-screen">
       <Header />
-
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://i.pinimg.com/736x/b9/e5/d0/b9e5d04a547eac502ccaf27f63a3df9e.jpg"
+          src="https://i.pinimg.com/736x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg"
           alt="Netflix Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-110 contrast-125"
         />
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
-      {/* Login Form */}
       <form
         onSubmit={(e) => e.preventDefault()}
         className="w-96 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
