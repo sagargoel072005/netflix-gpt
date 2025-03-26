@@ -45,16 +45,26 @@ const user = useSelector((store)=> store.user)
     return () => unsubscribe();
     },[])
 
+
+const handleGptSearchClick = () => {
+
+}
+
   return (
     <div className="absolute w-screen flex px-8 py-2 bg-gradient-to-b from-black z-40 justify-between">
-      {/* Logo */}
       <img
         className="w-44"
         src={LOGO}
         alt="Netflix Logo"
       />
 
- {user && (     <div className="flex items-center gap-4">
+ {user && (    
+   <div className="flex items-center gap-4">
+   <button className="py-2 px-4 my-2 mx-4 bg-purple-800 text-white rounded-lg"
+   onClick={handleGptSearchClick}
+   >
+    GPT Search
+   </button>
         <img
           className="w-12 h-12"
           src="https://occ-0-5244-3647.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e"

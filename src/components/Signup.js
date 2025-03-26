@@ -84,11 +84,11 @@ const Signup = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/04ef06cc-5f81-4a8e-8db0-6430ba4af286/web/IN-en-20250224-TRIFECTA-perspective_3a9c67b5-1d1d-49be-8499-d179f6389935_large.jpg"
+          src="https://i.pinimg.com/736x/b9/e5/d0/b9e5d04a547eac502ccaf27f63a3df9e.jpg"
           alt="Netflix Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
 
       {/* Login Form */}
@@ -114,7 +114,6 @@ const Signup = () => {
           type="text"
           placeholder="Email or phone number"
           ref={email}
-          autoComplete="email"
           className="w-full p-3 mb-4 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-600 transition-all text-white"
         />
 
@@ -122,7 +121,6 @@ const Signup = () => {
           type="password"
           placeholder="Password"
           ref={password}
-          autoComplete="password"
           className="w-full p-3 mb-4 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-600 transition-all text-white"
         />
 

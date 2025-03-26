@@ -1,46 +1,47 @@
-import React, { useEffect } from 'react'
-import Header from './Header';
-import { API_OPTIONS } from '../utils/constants';
-import MainContainer from './MainContainer';
-import SecondaryContainer from './SecondaryContainer';
-import { useDispatch } from 'react-redux';
-import { addNowPlayingmovies } from '../utils/movieSlice';
+import React, { useEffect } from "react";
+import Header from "./Header";
+import MainContainer from "./MainContainer";
+import SecondaryContainer from "./SecondaryContainer";
+import { useDispatch } from "react-redux";
+import {
+  addNowPlayingmovies,
+  addPopularmovies,
+  addUpcomingmovies,
+  addTopRatedmovies,
+} from "../utils/movieSlice";
+import { API_OPTIONS } from "../utils/constants";
+import GptSearch from "./GptSearch";
 
 const Browse = () => {
   const dispatch = useDispatch();
-  const getNowPlayingMovies = async () => {
+
+  // Reusable function to fetch movies
+  const fetchMovies = async (url, action) => {
     try {
-        const data = await fetch("https://api.themoviedb.org/3/movie/now_playing?page=1", API_OPTIONS);
-        const json = await data.json();
-        console.log("API Response:", json); // ✅ Debugging: Check API response
-        return json;
+      const response = await fetch(url, API_OPTIONS);
+      const data = await response.json();
+      console.log(`API Response for ${url}:`, data);
+      dispatch(action(data.results)); // Dispatch to Redux
     } catch (error) {
-        console.error("Error fetching movies:", error); // ✅ Debugging: Check for errors
-        return { results: [] }; // Return an empty array if the request fails
+      console.error(`Error fetching movies from ${url}:`, error);
     }
-};
+  };
 
-
-
-useEffect(() => {
-  // Fetch data and dispatch the action
-  getNowPlayingMovies()
-      .then((data) => {
-          console.log("Fetched Data:", data); // ✅ Debugging: Check fetched data
-          dispatch(addNowPlayingmovies(data.results)); // ✅ Dispatch with correct payload
-      })
-      .catch((error) => {
-          console.error("Error fetching movies:", error);
-      });
-}, [dispatch]);
+  useEffect(() => {
+    fetchMovies("https://api.themoviedb.org/3/movie/now_playing?page=1", addNowPlayingmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/popular?page=1", addPopularmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/top_rated?page=1", addTopRatedmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/upcoming?page=1", addUpcomingmovies);
+  }, [dispatch]);
 
   return (
     <div>
-    <Header />
-    <MainContainer />
-    <SecondaryContainer />
+      <Header />
+      <GptSearch />
+      <MainContainer />
+      <SecondaryContainer />
     </div>
-  )
-}
+  );
+};
 
 export default Browse;
