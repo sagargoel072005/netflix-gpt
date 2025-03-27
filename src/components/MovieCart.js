@@ -1,15 +1,16 @@
 import { IMG_CDN } from "../utils/constants";
 
-const MovieCart = ({ posterPath }) => {
+const MovieCart = ({ posterPath, movie }) => {
   return (
-    <div className="min-w-[110px] md:min-w-[150px] cursor-pointer transition-transform transform hover:scale-110">
+    <div className="w-[180px] h-[300px] inline-block cursor-pointer transition-transform transform hover:scale-105">
       <img
-        className="w-full h-auto rounded-lg shadow-lg"
-        alt="Movie Poster"
+        className="w-[180px] h-[270px] object-cover rounded-lg shadow-md"
+        alt={movie.title}
         src={IMG_CDN + posterPath}
       />
+      <p className="text-sm text-center mt-2 text-white truncate w-[180px]">{movie.title}</p>
     </div>
   );
 };
 
-export default MovieCart;
+export default MovieCart;

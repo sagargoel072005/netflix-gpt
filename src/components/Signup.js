@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-
+import { NETFLIX_BACKGROUND } from "../utils/constants";
 
 const Signup = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -82,7 +82,7 @@ const Signup = () => {
       <Header />
       <div className="absolute inset-0">
         <img
-          src="https://i.pinimg.com/736x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg"
+          src={NETFLIX_BACKGROUND}
           alt="Netflix Background"
           className="w-full h-full object-cover brightness-110 contrast-125"
         />

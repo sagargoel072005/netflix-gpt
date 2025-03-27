@@ -9,6 +9,7 @@ import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import { USER_ICON } from "../utils/constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -28,9 +29,6 @@ const showGptSearch = useSelector((store)=>store.gpt.showGptSearch);
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
-
         const { uid, email, displayName } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
         navigate("/browse")
@@ -85,7 +83,7 @@ const handleLanguageChange = (e) => {
         
         <img
           className="w-10 h-10 rounded-md cursor-pointer"
-          src="https://occ-0-5244-3647.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e"
+          src={USER_ICON}
           alt="User Profile"
         />
   

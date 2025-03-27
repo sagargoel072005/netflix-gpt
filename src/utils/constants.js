@@ -5,7 +5,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWM5MTMwZjk0NjE5N2Y5NDkyYzU5YmI0NmM1NzE4OSIsIm5iZiI6MTc0MjY0MjUxMC4yOTksInN1YiI6IjY3ZGU5ZDRlMWZlZTg3YzFiYzdhYTUyZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.G6pej_a2TOhhbVyzH5ti-r6U8_HS0UKzF5vpyfx69GE'
+    Authorization: 'Bearer' + process.env.REACT_APP_TMDB_API,
   }
 };
 
@@ -15,3 +15,9 @@ export const SUPPORTED_LANGUAGES = [
   {identifier:"en" , name:"English"},
   {identifier:"hindi" , name:"Hindi"},
   {identifier:"spanish" , name:"Spanish"}];
+
+export const API_KEY = process.env.REACT_APP_API_KEY;
+
+export const USER_ICON = "https://occ-0-5244-3647.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e";
+
+export const NETFLIX_BACKGROUND = "https://i.pinimg.com/736x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg";
