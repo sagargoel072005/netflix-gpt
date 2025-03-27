@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const API_KEY = "45c9130f946197f9492c59bb46c57189"; // Replace with your actual TMDB API Key
+const API_KEY = process.env.REACT_APP_API_KEY; 
 
 const MovieDetails = () => {
   const location = useLocation();
