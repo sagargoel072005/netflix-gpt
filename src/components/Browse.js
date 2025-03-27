@@ -24,7 +24,6 @@ const Browse = () => {
     try {
       const response = await fetch(url, API_OPTIONS);
       const data = await response.json();
-      console.log(`API Response for ${url}:`, data);
       dispatch(action(data.results)); // Dispatch to Redux
     } catch (error) {
       console.error(`Error fetching movies from ${url}:`, error);
