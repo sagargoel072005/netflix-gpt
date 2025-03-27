@@ -46,8 +46,7 @@ const GptSearchBar = () => {
         .split(",")
         .map((movie) => movie.trim())
         .filter(Boolean); // Remove empty values
-  
-      console.log("🎬 Extracted Movies:", gptMovies);
+
   
       if (gptMovies.length === 0) {
         throw new Error("AI did not return valid movie names.");
