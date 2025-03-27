@@ -1,7 +1,7 @@
 import React from 'react';
 import Browse from './Browse';
 import Signup from './Signup';
-import { useDispatch } from 'react-redux';
+import MovieDetails from './MovieDetails';
 import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 
@@ -16,6 +16,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/browse",
                 element: <Browse />,
+            },
+            {
+              path: "/title/:id",
+              element: <MovieDetails />,
             },
            
 ]);

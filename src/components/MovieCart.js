@@ -1,14 +1,19 @@
-import { IMG_CDN } from "../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const MovieCart = ({ posterPath, movie }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/title/${movie.id}`, { state: { movie } });
+  };
+
   return (
-    <div className="w-[180px] h-[300px] inline-block cursor-pointer transition-transform transform hover:scale-105">
-      <img
-        className="w-[180px] h-[270px] object-cover rounded-lg shadow-md"
-        alt={movie.title}
-        src={IMG_CDN + posterPath}
+    <div onClick={handleClick} className="cursor-pointer transform transition hover:scale-105">
+      <img 
+        src={`https://image.tmdb.org/t/p/w500${posterPath}`} 
+        alt={movie.title} 
+        className="rounded-lg shadow-lg w-40 h-60 object-cover"
       />
-      <p className="text-sm text-center mt-2 text-white truncate w-[180px]">{movie.title}</p>
     </div>
   );
 };
