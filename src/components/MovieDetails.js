@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-// const API = process.env.REACT_APP_TMDB_KEY || "API_KEY_NOT_FOUND";
+const API_KEY = process.env.REACT_APP_TMDB_KEY || "API_KEY_NOT_FOUND";
+console.log("API Key:", API_KEY);
 
 const MovieDetails = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const movie = location.state?.movie;
   const [trailerKey, setTrailerKey] = useState(null);
 
@@ -37,11 +39,14 @@ const MovieDetails = () => {
 
   return (
     <div className="w-screen h-screen overflow-hidden relative text-white">
+   
+      {/* Movie Details */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black z-10 flex flex-col justify-center px-24">
         <h1 className="text-4xl pb-4 font-bold">{movie.original_title || movie.title}</h1>
         <p className="hidden md:inline-block mt-2 text-md w-1/3">{movie.overview}</p>
       </div>
 
+      {/* Trailer or Fallback Message */}
       {trailerKey ? (
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <iframe
@@ -52,7 +57,7 @@ const MovieDetails = () => {
           ></iframe>
         </div>
       ) : (
-        <p className="text-red-400 mt-4">Trailer not available</p>
+        <p className="absolute bottom-4 left-4 text-red-400">Trailer not available</p>
       )}
     </div>
   );

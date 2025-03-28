@@ -18,13 +18,15 @@ const MovieList = ({ title, movies = [] }) => {
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex space-x-4">
           {filteredMovies.map((movie) => (
-            <div 
-              key={movie.id} 
-              onClick={() => handleClickPoster(movie)} 
-              className="cursor-pointer flex flex-col items-center min-w-[160px]"
+            <div
+              key={movie.id}
+              onClick={() => handleClickPoster(movie)}
+              className="cursor-pointer flex flex-col items-center min-w-[160px] max-w-[180px]"
             >
               <MovieCart posterPath={movie.poster_path} movie={movie} />
-              <p className="text-white mt-2 text-center w-full">{movie.title}</p>
+              <p className="text-white mt-2 text-center w-full text-sm truncate max-w-[160px]">
+                {movie.title}
+              </p>
             </div>
           ))}
         </div>
@@ -34,3 +36,4 @@ const MovieList = ({ title, movies = [] }) => {
 };
 
 export default MovieList;
+

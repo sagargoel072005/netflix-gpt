@@ -47,8 +47,8 @@ const Signup = () => {
           updateProfile(user, {
             displayName: name.current.value,
           }).then(() => {
-            const { uid , email , displayName} = auth.currentUser; //auth is the new information and user is not updated value
-            dispatch(addUser({uid:uid, email:email, displayName:displayName }));
+            const { uid, email, displayName } = auth.currentUser; //auth is the new information and user is not updated value
+            dispatch(addUser({ uid: uid, email: email, displayName: displayName }));
           }).catch((error) => {
             setErrorMessage(error.message);
           });
@@ -124,7 +124,7 @@ const Signup = () => {
         {errorMessage && <p className="text-red-500 text-sm mb-4">{errorMessage}</p>}
 
         <button
-          className="w-full bg-red-600 hover:bg-red-700 transition-all p-3 rounded font-bold text-lg"
+          className="w-full bg-red-700 p-3 rounded font-bold text-lg hover:bg-red-400 transition duration-300"
           type="button"
           onClick={handleButtonClick}
         >
