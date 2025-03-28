@@ -20,7 +20,7 @@ const NetflixFooter = () => {
             <li className="hover:underline"><a href="/" onClick={(e) => e.preventDefault()}>Legal Notices</a></li>
           </ul>
           <ul className="space-y-3">
-            <li className="hover:underline"><a href="#" onClick={(e) => e.preventDefault()}>Help Centre</a></li>
+            <li className="hover:underline"><a href="/" onClick={(e) => e.preventDefault()}>Help Centre</a></li>
             <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Jobs</a></li>
             <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Cookie Preferences</a></li>
           </ul>

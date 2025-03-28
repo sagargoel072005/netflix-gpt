@@ -1,4 +1,3 @@
-import GptSearch from "../components/GptSearch";
 
 const lang = {
 
