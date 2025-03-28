@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const API = process.env.REACT_APP_TMDB_KEY || "API_KEY_NOT_FOUND";
-console.log("API Key:", API);
-
+// const API = process.env.REACT_APP_TMDB_KEY || "API_KEY_NOT_FOUND";
 
 const MovieDetails = () => {
   const location = useLocation();
@@ -16,7 +14,7 @@ const MovieDetails = () => {
 
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${API}`
+          `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${process.env.REACT_APP_TMDB_KEY}`
         );
         const data = await response.json();
 
