@@ -7,37 +7,34 @@ const NetflixFooter = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center md:justify-start space-x-6 mb-6">
-          <a href="#" className="text-gray-400 hover:text-white text-xl"><FaFacebookF /></a>
-          <a href="#" className="text-gray-400 hover:text-white text-xl"><FaInstagram /></a>
-          <a href="#" className="text-gray-400 hover:text-white text-xl"><FaTwitter /></a>
-          <a href="#" className="text-gray-400 hover:text-white text-xl"><FaYoutube /></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaFacebookF /></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaInstagram /></a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaTwitter /></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaYoutube /></a>
         </div>
 
-        {/* Footer Links */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm text-center md:text-left">
           <ul className="space-y-3">
-            <li><a href="#" className="hover:underline">Audio Description</a></li>
-            <li><a href="#" className="hover:underline">Investor Relations</a></li>
-            <li><a href="#" className="hover:underline">Legal Notices</a></li>
+            <li className="hover:underline"><a href="#" onClick={(e) => e.preventDefault()}>Audio Description</a></li>
+            <li className="hover:underline"><a href="#" onClick={(e) => e.preventDefault()}>Investor Relations</a></li>
+            <li className="hover:underline"><a href="#" onClick={(e) => e.preventDefault()}>Legal Notices</a></li>
           </ul>
           <ul className="space-y-3">
-            <li><a href="#" className="hover:underline">Help Centre</a></li>
-            <li><a href="#" className="hover:underline">Jobs</a></li>
-            <li><a href="#" className="hover:underline">Cookie Preferences</a></li>
+            <li className="hover:underline"><a href="#" onClick={(e) => e.preventDefault()}>Help Centre</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Jobs</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Cookie Preferences</a></li>
           </ul>
           <ul className="space-y-3">
-            <li><a href="#" className="hover:underline">Gift Cards</a></li>
-            <li><a href="#" className="hover:underline">Terms of Use</a></li>
-            <li><a href="#" className="hover:underline">Corporate Information</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Gift Cards</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Terms of Use</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Corporate Information</a></li>
           </ul>
           <ul className="space-y-3">
-            <li><a href="#" className="hover:underline">Media Centre</a></li>
-            <li><a href="#" className="hover:underline">Privacy</a></li>
-            <li><a href="#" className="hover:underline">Contact Us</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Media Centre</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Privacy</a></li>
+            <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:underline">Contact Us</a></li>
           </ul>
         </div>
-
-        {/* Service Code Button */}
         <div className="mt-6 flex justify-center md:justify-start">
           <button className="border border-gray-400 text-gray-400 py-2 px-4 text-sm hover:bg-gray-700 hover:text-white">
             Service Code
