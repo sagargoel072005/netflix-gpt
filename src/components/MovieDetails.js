@@ -42,7 +42,7 @@ const MovieDetails = () => {
    
       {/* Movie Details */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black z-10 flex flex-col justify-center px-24">
-        <h1 className="text-4xl pb-4 font-bold">{movie.original_title || movie.title}</h1>
+        <h1 className="hidden md:inline-block text-4xl pb-4 font-bold">{movie.original_title || movie.title}</h1>
         <p className="hidden md:inline-block mt-2 text-md w-1/3">{movie.overview}</p>
       </div>
 
