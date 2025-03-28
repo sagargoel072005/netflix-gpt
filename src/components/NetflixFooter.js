@@ -7,32 +7,40 @@ const NetflixFooter = () => {
 
         {/* Social Icons */}
         <div className="flex justify-center md:justify-start space-x-6 mb-6">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaFacebookF /></a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaInstagram /></a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaTwitter /></a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white text-xl"><FaYoutube /></a>
+          <button className="text-gray-400 hover:text-white text-xl">
+            <FaFacebookF />
+          </button>
+          <button className="text-gray-400 hover:text-white text-xl">
+            <FaInstagram />
+          </button>
+          <button className="text-gray-400 hover:text-white text-xl">
+            <FaTwitter />
+          </button>
+          <button className="text-gray-400 hover:text-white text-xl">
+            <FaYoutube />
+          </button>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm text-center md:text-left">
           <ul className="space-y-3">
-            <li className="hover:underline"><a href="/" onClick={(e) => e.preventDefault()}>Audio Description</a></li>
-            <li className="hover:underline"><a href="/" onClick={(e) => e.preventDefault()}>Investor Relations</a></li>
-            <li className="hover:underline"><a href="/" onClick={(e) => e.preventDefault()}>Legal Notices</a></li>
+            <li><button className="hover:underline">Audio Description</button></li>
+            <li><button className="hover:underline">Investor Relations</button></li>
+            <li><button className="hover:underline">Legal Notices</button></li>
           </ul>
           <ul className="space-y-3">
-            <li className="hover:underline"><a href="/" onClick={(e) => e.preventDefault()}>Help Centre</a></li>
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Jobs</a></li>
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Cookie Preferences</a></li>
+            <li><button className="hover:underline">Help Centre</button></li>
+            <li><button className="hover:underline">Jobs</button></li>
+            <li><button className="hover:underline">Cookie Preferences</button></li>
           </ul>
           <ul className="space-y-3">
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Gift Cards</a></li>
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Terms of Use</a></li>
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Corporate Information</a></li>
+            <li><button className="hover:underline">Gift Cards</button></li>
+            <li><button className="hover:underline">Terms of Use</button></li>
+            <li><button className="hover:underline">Corporate Information</button></li>
           </ul>
           <ul className="space-y-3">
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Media Centre</a></li>
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Privacy</a></li>
-            <li><a href="/" onClick={(e) => e.preventDefault()} className="hover:underline">Contact Us</a></li>
+            <li><button className="hover:underline">Media Centre</button></li>
+            <li><button className="hover:underline">Privacy</button></li>
+            <li><button className="hover:underline">Contact Us</button></li>
           </ul>
         </div>
         <div className="mt-6 flex justify-center md:justify-start">

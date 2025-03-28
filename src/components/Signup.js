@@ -135,7 +135,7 @@ const Signup = () => {
           <label className="flex items-center cursor-pointer">
             <input type="checkbox" className="mr-2 accent-red-600" /> Remember Me
           </label>
-          <a href="#" className="hover:underline">Need help?</a>
+          <button className="hover:underline">Need help?</button>
         </div>
 
         <p className="mt-6 text-center text-gray-400">
@@ -150,7 +150,7 @@ const Signup = () => {
 
         <p className="mt-2 text-xs text-gray-500 text-center">
           This page is protected by Google reCAPTCHA to ensure you're not a bot.
-          <a href="#" className="text-blue-500 hover:underline"> Learn more</a>.
+          <button className="text-blue-500 hover:underline"> Learn more</button>.
         </p>
       </form>
     </div>
