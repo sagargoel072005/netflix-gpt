@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const API_KEY = process.env.REACT_APP_API_KEY; 
+const API = process.env.REACT_APP_TMDB_KEY || "API_KEY_NOT_FOUND";
+console.log("API Key:", API);
+
 
 const MovieDetails = () => {
   const location = useLocation();
@@ -14,12 +16,12 @@ const MovieDetails = () => {
 
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${API_KEY}`
+          `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${API}`
         );
         const data = await response.json();
 
-        console.log("TMDB API Response:", data); // Debugging
-
+        console.log("TMDB API Response:", data);
+        
         const trailer = data.results.find(
           (video) => video.type === "Trailer" && video.site === "YouTube"
         );
@@ -39,7 +41,7 @@ const MovieDetails = () => {
     <div className="w-screen h-screen overflow-hidden relative text-white">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black z-10 flex flex-col justify-center px-24">
         <h1 className="text-4xl pb-4 font-bold">{movie.original_title || movie.title}</h1>
-        <p className="mt-2 text-md w-1/3">{movie.overview}</p>
+        <p className="hidden md:inline-block mt-2 text-md w-1/3">{movie.overview}</p>
       </div>
 
       {trailerKey ? (

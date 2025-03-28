@@ -4,9 +4,9 @@ const NetflixFooter = () => {
   return (
     <footer className="bg-black text-gray-400 py-10 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Social Icons */}
-        <div className="flex space-x-6 mb-6">
+        <div className="flex justify-center md:justify-start space-x-6 mb-6">
           <a href="#" className="text-gray-400 hover:text-white text-xl"><FaFacebookF /></a>
           <a href="#" className="text-gray-400 hover:text-white text-xl"><FaInstagram /></a>
           <a href="#" className="text-gray-400 hover:text-white text-xl"><FaTwitter /></a>
@@ -14,7 +14,7 @@ const NetflixFooter = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-sm text-center md:text-left">
           <ul className="space-y-3">
             <li><a href="#" className="hover:underline">Audio Description</a></li>
             <li><a href="#" className="hover:underline">Investor Relations</a></li>
@@ -38,10 +38,15 @@ const NetflixFooter = () => {
         </div>
 
         {/* Service Code Button */}
-        <div className="mt-6">
+        <div className="mt-6 flex justify-center md:justify-start">
           <button className="border border-gray-400 text-gray-400 py-2 px-4 text-sm hover:bg-gray-700 hover:text-white">
             Service Code
           </button>
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center md:text-left mt-6 text-xs text-gray-500">
+          © 2025 Netflix Clone. All rights reserved.
         </div>
 
       </div>

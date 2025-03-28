@@ -13,7 +13,6 @@ const GptSearchBar = () => {
   // Fetch movie details from TMDB
   const searchMovieTmdb = async (movie) => {
     try {
-      console.log(`🔍 Searching TMDB for: "${movie}"`);
       const response = await fetch(
         `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(movie)}&include_adult=false&language=en-US&page=1`,
         API_OPTIONS
@@ -33,7 +32,6 @@ const GptSearchBar = () => {
   
     try {
       const aiResponse = await getGeminiResponse(gptQuery); // ✅ Await response
-      console.log("🤖 Full AI Response:", aiResponse);
   
       // ✅ Extract text directly (assuming AI returns a plain string)
       const responseText = aiResponse.trim(); 
@@ -64,7 +62,7 @@ const GptSearchBar = () => {
   
 
   return (
-    <div className="pt-[35%] md:pt-[10%] flex justify-center">
+    <div className="pt-[65%] md:pt-[10%] flex justify-center">
       <form className="w-full md:w-1/2 bg-black grid grid-cols-12 rounded-lg" onSubmit={(e) => e.preventDefault()}>
         <input
           ref={searchText}
@@ -73,7 +71,7 @@ const GptSearchBar = () => {
           placeholder={lang[langKey]?.GptSearchPlaceholder || "Search for movies..."}
         />
         <button
-          className="py-2 px-6 m-4 rounded-lg bg-red-700 text-white col-span-3"
+          className="py-2 px-6 m-4 rounded-lg bg-red-700 text-center text-white col-span-3"
           onClick={handleGptSearchClick}
         >
           {lang[langKey]?.search || "Search"}

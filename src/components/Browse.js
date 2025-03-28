@@ -31,10 +31,10 @@ const Browse = () => {
   };
 
   useEffect(() => {
-    fetchMovies("https://api.themoviedb.org/3/movie/now_playing?page=1", addNowPlayingmovies);
-    fetchMovies("https://api.themoviedb.org/3/movie/popular?page=1", addPopularmovies);
-    fetchMovies("https://api.themoviedb.org/3/movie/top_rated?page=1", addTopRatedmovies);
-    fetchMovies("https://api.themoviedb.org/3/movie/upcoming?page=1", addUpcomingmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1", addNowPlayingmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", addPopularmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", addTopRatedmovies);
+    fetchMovies("https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1", addUpcomingmovies);
   }, [dispatch]);
 
   return (

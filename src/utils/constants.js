@@ -5,7 +5,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer'+ process.env.REACT_APP_TMDB_API,
+    Authorization: 'Bearer '+process.env.REACT_APP_TMDB_API,
 }
 };
 
@@ -16,7 +16,7 @@ export const SUPPORTED_LANGUAGES = [
   {identifier:"hindi" , name:"Hindi"},
   {identifier:"spanish" , name:"Spanish"}];
 
-export const API_KEY = process.env.REACT_APP_API_KEY;
+export const API_KEY = process.env.REACT_APP_API_KEY; //gemini
 
 export const USER_ICON = "https://occ-0-5244-3647.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e";
 

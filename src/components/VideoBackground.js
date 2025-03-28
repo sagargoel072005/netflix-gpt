@@ -27,7 +27,7 @@ const VideoBackground = ({ movieId }) => {
       {/* Ensure iframe stays in the background */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <iframe
-          className="w-full h-full scale-[1.3]"
+          className="w-full h-full sm:scale-[1.3] scale-[1.1]"
           src={`https://www.youtube.com/embed/${trailerId}?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&playlist=${trailerId}&loop=1`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
