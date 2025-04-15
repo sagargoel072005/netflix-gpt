@@ -109,14 +109,14 @@ const Signup = () => {
 
         <input
           type="text"
-          placeholder="Email or phone number"
+          placeholder="Email"
           ref={email}
           className="w-full p-3 mb-4 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-600 transition-all text-white"
         />
 
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Password should contain atleast 8 characters"
           ref={password}
           className="w-full p-3 mb-4 bg-gray-800 rounded focus:outline-none focus:ring-2 focus:ring-red-600 transition-all text-white"
         />

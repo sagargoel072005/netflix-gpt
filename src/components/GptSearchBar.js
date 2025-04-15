@@ -63,34 +63,38 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[65%] md:pt-[10%] flex justify-center">
-      <form className="w-full md:w-1/2 bg-black grid grid-cols-12 rounded-lg" onSubmit={(e) => e.preventDefault()}>
-        <input
-          ref={searchText}
-          type="text"
-          className="p-4 m-4 rounded-lg col-span-9"
-          placeholder={lang[langKey]?.GptSearchPlaceholder || "Search for movies..."}
-          disabled={loading} // ⬅️ Disable input while loading
-        />
-        <button
-          className={`py-2 px-6 m-4 rounded-lg text-center text-white col-span-3 transition duration-300 ${
-            loading ? "bg-gray-500 cursor-not-allowed" : "bg-red-700 hover:bg-red-400"
-          }`}
-          onClick={handleGptSearchClick}
-          disabled={loading} // ⬅️ Disable button while loading
-        >
-          {loading ? "Loading..." : lang[langKey]?.search || "Search"}
-        </button>
-      </form>
+<div className="pt-[65%] md:pt-[10%] flex flex-col items-center">
+  <form
+    className="w-full md:w-1/2 bg-black grid grid-cols-12 rounded-lg"
+    onSubmit={(e) => e.preventDefault()}
+  >
+    <input
+      ref={searchText}
+      type="text"
+      className="p-4 m-4 rounded-lg col-span-9"
+      placeholder={lang[langKey]?.GptSearchPlaceholder || "Search for movies..."}
+      disabled={loading}
+    />
+    <button
+      className={`flex items-center justify-center py-2 px-6 m-4 rounded-lg text-center text-white col-span-3 transition duration-300 text-base sm:text-lg ${
+        loading ? "bg-gray-500 cursor-not-allowed" : "bg-red-700 hover:bg-red-400"
+      }`}
+      onClick={handleGptSearchClick}
+      disabled={loading}
+    >
+      {loading ? "Loading" : lang[langKey]?.search || "Search"}
+    </button>
+  </form>
 
-      {/* Loader Indicator */}
-      {loading && (
-        <div className="flex items-center justify-center mt-4">
-          <div className="w-8 h-8 border-4 border-red-500 border-t-transparent rounded-full animate-spin"></div>
-          <span className="text-white ml-2">Fetching results...</span>
-        </div>
-      )}
+  {/* Loader Indicator */}
+  {loading && (
+    <div className="flex flex-col items-center justify-center mt-4">
+      <div className="w-8 h-8 border-4 border-red-500 border-t-transparent rounded-full animate-spin"></div>
+      <span className="text-white mt-2">Fetching results...</span>
     </div>
+  )}
+</div>
+
   );
 };
 
