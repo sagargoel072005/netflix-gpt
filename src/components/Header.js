@@ -48,7 +48,7 @@ const Header = () => {
   };
 
   return (
-<div className="fixed top-0 left-0 w-full px-6 py-3  md:bg-gradient-to-b md:from-black md:to-transparent z-50 flex flex-wrap items-center justify-between gap-4 md:flex-nowrap">
+ <div className="fixed top-0 left-0 w-full px-6 py-3 bg-gradient-to-b from-black to-transparent z-50 flex flex-wrap items-center justify-between gap-4 md:flex-nowrap">
   <img className="w-28 mx-auto md:w-36 md:mx-1 cursor-pointer" src={LOGO} alt="Netflix Logo" />
   {user && (
     <div className="flex flex-wrap items-center gap-4 md:gap-6 w-full md:w-auto justify-center md:justify-end">
